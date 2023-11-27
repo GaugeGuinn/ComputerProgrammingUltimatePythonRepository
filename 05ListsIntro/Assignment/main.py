@@ -9,6 +9,7 @@ def equal_edges(integers):
         return True
     else:
         return False
+print("equal_edges:")
 print("1, 2, 3, 4, 1 ==>", equal_edges("1, 2, 3, 4, 1"))
 print("5, 6, 7, 8, 9 ==>", equal_edges("5, 6, 7, 8, 9"))
 
@@ -23,7 +24,7 @@ def common_edge(list1, list2):
     if last1 == first2 or last1 == last2:
         return True
     else: return False
-
+print("common_edge:")
 print("[1, 2, 3, 4], [5, 6, 7, 8] ==>", common_edge([1, 2, 3, 4], [5, 6, 7, 8]))
 print("[1, 2, 3,], [3, 4, 5] ==>", common_edge([1, 2, 3,], [3, 4, 5]))
 
@@ -37,7 +38,7 @@ def all_the_same(integers):
         return True
     else:
         return False
-
+print("all_the_same:")
 print("[1, 2, 3]", all_the_same([1, 2, 3,]))
 print("[5, 5, 5]", all_the_same([5, 5, 5,]))   
 
@@ -51,7 +52,7 @@ def all_unique(integers):
         return True
     else:
         return False
-    
+print("all_unique:")
 print("[1, 2, 3]", all_unique([1, 2, 3]))
 print("[5, 5, 5]", all_unique([5, 5, 5]))
 
@@ -77,8 +78,13 @@ print("all_true:")
 print("[true, false, true]", all_true([True, False, True]))
 
 def mostly_true(booleans):
-    first, middle, last == booleans
-    count = 0
-    if first == True or middle == True or last == True:
-        count = count + 1
-        if middle ==
+    first, middle, last = booleans
+    if first == True and middle == True:
+        return True
+    if middle == True and last == True:
+        return True
+    if first == True and last == True:
+        return True
+print("mostly_true:")
+print("[True, False, True]", mostly_true([True, False, True]))
+print("[False, False, False]", mostly_true([False, False, False]))
