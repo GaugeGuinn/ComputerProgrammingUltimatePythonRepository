@@ -85,6 +85,30 @@ def mostly_true(booleans):
         return True
     if first == True and last == True:
         return True
+    else: 
+        return False
 print("mostly_true:")
-print("[True, False, True]", mostly_true([True, False, True]))
+print("[True, False, False]", mostly_true([True, False, False]))
 print("[False, False, False]", mostly_true([False, False, False]))
+
+def make_copy(integers):
+    copy = integers 
+    return copy
+print(make_copy([5, 6, 1]))
+
+def repeat_thrice(integer):
+    repeat = [integer, integer, integer]
+    return repeat
+print(repeat_thrice(3))
+
+def make_reversed_copy(integers):
+    first, middle, last = integers
+    reverse = [last, middle, first]
+    return reverse
+print(make_reversed_copy([1, 2, 3]))
+
+def reverse_in_place(integers):
+    [first, middle, last] = integers
+    integers = [last, middle, first]
+    return integers
+print(reverse_in_place([1, 2, 3]))
