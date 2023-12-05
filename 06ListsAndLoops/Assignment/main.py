@@ -92,3 +92,76 @@ def has_vowel(characters):
 print("has_vowel---------------")
 print(has_vowel(["a", "b", "c"]))
 print(has_vowel(["d", "b", "c"]))
+
+def all_the_same(nums):
+    count = 0
+    numsTrue = 0
+    while count == 0:
+        for num in nums:
+            if num == nums[0]:
+                numsTrue = numsTrue + 1
+            else:
+                count = count + 1
+                return False
+            if numsTrue == len(nums):
+                return True
+           
+print("all_the_same---------------")
+print(all_the_same(["2", "2", "2"]))
+print(all_the_same(["1", "2", "3"]))
+
+def increasing(nums):
+    greatest = nums[0]
+    count = 1
+    for num in nums:
+        if greatest < num:
+            greatest = num
+            count = count + 1
+    if count == len(nums):
+         return True
+    else:
+         return False
+        
+print("increasing---------------")
+print(increasing(["2", "2", "2"]))
+print(increasing(["1", "2", "3"]))
+
+def is_incrementing(nums):
+    number = nums[0]
+    for num in nums:
+        if num == number + 1:
+            return True
+    else: 
+        return False
+
+print("is_incrementing---------------")
+print(is_incrementing([2,2,2]))
+print(is_incrementing([1,2,3]))
+
+def has_adjacent_repeat(nums):
+    prev = 9999999999
+    for num in nums:
+        if num == prev:
+            return True
+        else:
+            prev = num
+    else:
+        return False
+print("has_adjacent_repeat---------------")
+print(has_adjacent_repeat([2,2,2]))
+print(has_adjacent_repeat([1,2,3]))
+
+def sum_with_skip(nums):
+    skip = False
+    total = 0
+    for num in nums:
+        if num == -1 and skip == True:
+            skip = False
+        elif num == -1 and skip == False:
+            skip = True
+        elif skip == False:
+            total = num + total
+    return total
+
+print("sum_with_skip---------------")
+print(sum_with_skip([1,2,-1,1,-1,2]))
